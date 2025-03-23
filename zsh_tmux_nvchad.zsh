@@ -121,6 +121,9 @@ source <(fzf --zsh)
 #eval "\$(zoxide init --cmd cd zsh)"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 eval "$(zoxide init zsh)"
+autoload -U +X bashcompinit && bashcompinit
+autoload -Uz compinit && compinit
+complete -o nospace -C /usr/local/bin/terraform terraform
 EOF
 
 # Install tmux and configure it
